@@ -56,4 +56,4 @@ tidy.data <- aggregate(base[,4:length(base)],list(
         subject=base$subject, 
         activity=base$activity),mean)%>%
         arrange(subject,activity)
-write.csv(tidy.data,"tidy_data.csv")
+write.table(tidy.data,"tidy_data.txt", row.name=FALSE) 
